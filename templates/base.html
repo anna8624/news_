@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = 'utf-8' name = "Viewport" content = "width=device-width, initial-scale=1">
+	<title>新聞系統</title>
+	{% load static %}
+	<style>
+		.aCenter{text-align:center;}
+		h2{background-color:#84C1FF}
+		.contentbox{background-color:#D2E9FF}
+	</style>
+<!--	<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" />-->
+	<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel = "stylesheet" integrity = "sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin = "anonymous">
+
+</head>
+<body>
+	<div id="warp">
+		<div class="container">
+			<div id="header">
+				 <div class="logo">
+						<img src="{% static "images/images.png" %}" width="180" height="50" alt="news" />
+				 </div>
+			</div>
+			<div class="headings">
+				<h2 class="aCenter" >新聞系統</h2>
+			</div>
+			{% block content %}{% endblock %}
+			<div class="aCenter" id="footer">&copy; Copyright 2022 Mr.Left Studio 新聞系統</div>
+		</div>
+
+	</div>
+<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity = "sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin = "anonymous"></script>
+
+</body>
+</html>
